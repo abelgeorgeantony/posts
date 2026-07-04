@@ -1,0 +1,27 @@
+# 1. Enable the remote theme plugin
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# 2. Point to your main repository (Format: username/repo-name)
+remote_theme: abelgeorgeantony/abelgeorgeantony.github.io
+
+
+# Site settings
+# These are used to personalize your site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Posts of Abel George Antony
+email: social.abelgeorgeantony@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  This are the posts of Abel George Antony.
+baseurl: "/posts" # the subpath of your site, e.g. /blog
+url: "https://abelgeorgeantony.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+instagram_username: abelgeorgeantony
+github_username: abelgeorgeantony
+
+exclude:
+  - README.md
