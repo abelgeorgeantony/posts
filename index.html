@@ -31,5 +31,9 @@ scripts:
 
 <p>Instagram</p>
 <ul>
-    <li><a href="YOUR_INSTAGRAM_URL" target="_blank" rel="noopener noreferrer">@yourusername</a></li>
+    {% for instapost in site.instagrams %}
+    <li>[{{ instapost.date | date: "%Y-%m-%d" }}] <a href="{{ instapost.url | relative_url }}">{{ instapost.title }}</a></li>
+    {% else %}
+    <li>No entries found.</li>
+    {% endfor %}
 </ul>
