@@ -8,6 +8,15 @@ plugins:
 remote_theme: abelgeorgeantony/abelgeorgeantony.github.io
 
 
+collections:
+  blogs:
+    output: true
+  youtubes:
+    output: true
+  instagrams:
+    output: true
+
+
 # Site settings
 # These are used to personalize your site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.

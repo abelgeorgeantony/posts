@@ -2,14 +2,15 @@
 permalink: /
 layout: base
 title: Posts
+figlet: posts
 scripts:
 - '/assets/js/image-effects.js'
 ---
 
 <p>Blogs</p>
 <ul>
-    {% for post in site.posts %}
-    <li>[{{ post.date | date: "%Y-%m-%d" }}] <a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% for blog in site.blogs %}
+    <li>[{{ blog.date | date: "%Y-%m-%d" }}] <a href="{{ blog.url | relative_url }}">{{ blog.title }}</a></li>
     {% else %}
     <li>No entries found.</li>
     {% endfor %}
@@ -19,7 +20,11 @@ scripts:
 
 <p>YouTube</p>
 <ul>
-    <li><a href="YOUR_YOUTUBE_CHANNEL_URL" target="_blank" rel="noopener noreferrer">Main Channel</a></li>
+    {% for video in site.youtubes %}
+    <li>[{{ video.date | date: "%Y-%m-%d" }}] <a href="{{ video.url | relative_url }}">{{ video.title }}</a></li>
+    {% else %}
+    <li>No entries found.</li>
+    {% endfor %}
 </ul>
 
 <br>
