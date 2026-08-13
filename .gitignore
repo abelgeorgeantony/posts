@@ -6,4 +6,6 @@ _site
 .bundle/
 vendor
 # Rubbish
+venv
+env
 .codex

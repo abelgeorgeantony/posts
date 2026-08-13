@@ -21,7 +21,7 @@ scripts:
 <p>YouTube</p>
 <ul>
     {% for video in site.youtubes %}
-    <li>[{{ video.date | date: "%Y-%m-%d" }}] <a href="{{ video.url | relative_url }}">{{ video.title }}</a></li>
+    <li>&lt;{{ video.author }} @ {{ video.date | date: "%Y-%m-%d" }}&gt; <a href="{{ video.url | relative_url }}">{{ video.title }}</a></li>
     {% else %}
     <li>No entries found.</li>
     {% endfor %}
