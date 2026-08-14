@@ -22,71 +22,86 @@ def scrape_channel(username, output_dir):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    # Format the channel URL targeting the videos tab
-    channel_url = f"https://www.youtube.com/@{username}/videos"
-
     ydl_opts = {
         'extract_flat': False, # False ensures we get the full description and exact dates
         'ignoreerrors': True,
         'quiet': False,
-        # 'playlist_items': '1-5', # Uncomment this to test on just the first 5 videos first
+        # 'playlist_items': '1-5', # Uncomment this to test on just the first 5 items per tab
     }
+    
+    # YouTube separates published content into distinct tabs
+    content_tabs = ['videos', 'shorts', 'streams']
+    
+    # Keep track of processed video IDs to avoid creating duplicates
+    processed_ids = set()
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-        print(f"Fetching metadata for {channel_url}...")
-        info = ydl.extract_info(channel_url, download=False)
+        for tab in content_tabs:
+            channel_url = f"https://www.youtube.com/@{username}/{tab}"
+            print(f"\nFetching metadata for {channel_url}...")
+            
+            info = ydl.extract_info(channel_url, download=False)
 
-        if not info or 'entries' not in info:
-            print("Could not find any videos or channel.")
-            return
-
-        entries = info['entries']
-        
-        for entry in entries:
-            if not entry:
+            if not info or 'entries' not in info:
+                print(f"Could not find any entries in the {tab} tab.")
                 continue
 
-            video_id = entry.get('id')
-            title = entry.get('title', 'Untitled')
-            desc = entry.get('description', '')
-            upload_date = entry.get('upload_date', '19700101') # format YYYYMMDD
-            uploader = entry.get('uploader', username)
-
-            # Parse yt-dlp date format to YYYY-MM-DD
-            try:
-                dt = datetime.strptime(upload_date, '%Y%m%d')
-                formatted_date = dt.strftime('%Y-%m-%d')
-            except ValueError:
-                formatted_date = '1970-01-01'
-
-            safe_title = escape_yaml_string(title)
-            safe_desc = escape_yaml_string(desc)
-            safe_uploader = escape_yaml_string(uploader)
+            entries = info['entries']
             
-            # Create a clean filename: YYYY-MM-DD-Video_Title.md
-            filename = f"{formatted_date}-{sanitize_filename(title)}.md"
-            filepath = os.path.join(output_dir, filename)
+            for entry in entries:
+                if not entry:
+                    continue
 
-            # Construct the file payload
-            content = f"""---
+                video_id = entry.get('id')
+                
+                # Skip if we already processed this video
+                if video_id in processed_ids:
+                    continue
+                processed_ids.add(video_id)
+
+                title = entry.get('title', 'Untitled')
+                desc = entry.get('description', '')
+                upload_date = entry.get('upload_date', '19700101') # format YYYYMMDD
+                uploader = entry.get('uploader', username)
+
+                # Parse yt-dlp date format to YYYY-MM-DD
+                try:
+                    dt = datetime.strptime(upload_date, '%Y%m%d')
+                    formatted_date = dt.strftime('%Y-%m-%d')
+                except ValueError:
+                    formatted_date = '1970-01-01'
+
+                safe_title = escape_yaml_string(title)
+                safe_desc = escape_yaml_string(desc)
+                safe_uploader = escape_yaml_string(uploader)
+                
+                # Create a clean filename: YYYY-MM-DD-Video_Title.md
+                filename = f"{formatted_date}-{sanitize_filename(title)}.md"
+                filepath = os.path.join(output_dir, filename)
+
+                # Dynamically assign the tag based on the tab being scraped
+                content_tag = tab if tab != 'videos' else 'vlog'
+
+                # Construct the file payload
+                content = f"""---
 layout: base
 title: "{safe_title}"
 desc: "{safe_desc}"
 figlet: youtube
 date:   {formatted_date}
-tags: [youtube, vlog]
+tags: [youtube, {content_tag}]
 author: "{safe_uploader}"
 ---
 
 {{% include youtube_embed.html id="{video_id}" %}}"""
 
-            with open(filepath, 'w', encoding='utf-8') as f:
-                f.write(content)
-            
-            print(f"Created: {filename}")
+                with open(filepath, 'w', encoding='utf-8') as f:
+                    f.write(content)
+                
+                print(f"Created: {filename} ({tab})")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Scrape YouTube channel metadata into Markdown files.")
+    parser = argparse.ArgumentParser(description="Scrape YouTube channel metadata (Videos, Shorts, Streams) into Markdown files.")
     parser.add_argument("username", help="YouTube username/handle (without the @ symbol)")
     parser.add_argument("--dir", default="youtube_metadata", help="Output directory for the markdown files")
     
