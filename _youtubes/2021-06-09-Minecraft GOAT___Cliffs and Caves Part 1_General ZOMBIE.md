@@ -2,7 +2,7 @@
 layout: base
 title: "Minecraft GOAT💥💥/Cliffs and Caves Part 1/General ZOMBIE"
 desc: ""
-figlet: youtube
+figlet: NONE
 date:   2021-06-09
 tags: [youtube, vlog]
 author: "General OOMBIE"

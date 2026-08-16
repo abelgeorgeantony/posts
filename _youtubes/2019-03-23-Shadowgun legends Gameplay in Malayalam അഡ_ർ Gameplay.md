@@ -2,7 +2,7 @@
 layout: base
 title: "Shadowgun legends Gameplay in Malayalam അഡാർ Gameplay"
 desc: "Subscribe"
-figlet: youtube
+figlet: NONE
 date:   2019-03-23
 tags: [youtube, vlog]
 author: "Abel TALKS"

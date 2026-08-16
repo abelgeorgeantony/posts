@@ -2,7 +2,7 @@
 layout: base
 title: "Games എല്ലാം Bore ആയി 😑/General ZOMBIE"
 desc: "Hello Zombies,             So Games Ellam Bore Ayi Thudangi. Ennannu Aayirakanikinnu Gamers Parayunath So This Is Just My Point Of View."
-figlet: youtube
+figlet: NONE
 date:   2021-11-14
 tags: [youtube, vlog]
 author: "General OOMBIE"

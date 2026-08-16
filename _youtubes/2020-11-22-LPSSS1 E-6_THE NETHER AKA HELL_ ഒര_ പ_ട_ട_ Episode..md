@@ -2,7 +2,7 @@
 layout: base
 title: "LPSSS1 E-6/THE NETHER AKA HELL/ ഒരു പൊട്ടാ Episode."
 desc: "Hey Machanmare.We are back."
-figlet: youtube
+figlet: NONE
 date:   2020-11-22
 tags: [youtube, vlog]
 author: "General OOMBIE"

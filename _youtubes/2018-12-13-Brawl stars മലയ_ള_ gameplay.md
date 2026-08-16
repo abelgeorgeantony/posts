@@ -2,7 +2,7 @@
 layout: base
 title: "Brawl stars മലയാളം gameplay"
 desc: "Please subscribe"
-figlet: youtube
+figlet: NONE
 date:   2018-12-13
 tags: [youtube, vlog]
 author: "Abel TALKS"

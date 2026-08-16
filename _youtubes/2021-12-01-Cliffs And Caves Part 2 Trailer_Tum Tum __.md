@@ -2,7 +2,7 @@
 layout: base
 title: "Cliffs And Caves Part 2 Trailer×Tum Tum 🔥🔥"
 desc: "Just a short edit."
-figlet: youtube
+figlet: NONE
 date:   2021-12-01
 tags: [youtube, vlog]
 author: "General OOMBIE"

@@ -2,7 +2,7 @@
 layout: base
 title: "Garena free fire Gameplay in മലയാളം"
 desc: "Subscribe"
-figlet: youtube
+figlet: NONE
 date:   2018-08-02
 tags: [youtube, vlog]
 author: "Abel TALKS"

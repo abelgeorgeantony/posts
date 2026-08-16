@@ -2,7 +2,7 @@
 layout: base
 title: "എങ്ങനെ Home buttonum back buttonum ശരിയാകാം"
 desc: "Subscribe"
-figlet: youtube
+figlet: NONE
 date:   2018-09-10
 tags: [youtube, vlog]
 author: "Abel TALKS"

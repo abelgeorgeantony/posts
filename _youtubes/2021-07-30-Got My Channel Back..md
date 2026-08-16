@@ -2,7 +2,7 @@
 layout: base
 title: "Got My Channel Back."
 desc: ""
-figlet: youtube
+figlet: NONE
 date:   2021-07-30
 tags: [youtube, vlog]
 author: "Abel TALKS"

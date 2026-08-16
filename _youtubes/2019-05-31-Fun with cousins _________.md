@@ -2,7 +2,7 @@
 layout: base
 title: "Fun with cousins 😎🤣🤣🤣🤣🔥🔥▶️"
 desc: "Subscribe for More. Aniyathimarumayi video cheyanamenkil comment cheyu."
-figlet: youtube
+figlet: NONE
 date:   2019-05-31
 tags: [youtube, vlog]
 author: "Abel TALKS"

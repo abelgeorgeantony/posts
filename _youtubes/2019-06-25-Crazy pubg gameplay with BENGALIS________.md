@@ -2,7 +2,7 @@
 layout: base
 title: "Crazy pubg gameplay with BENGALIS😂😂😂😂😆😆🔥🔥"
 desc: "Subscribe for More 😆😆😆"
-figlet: youtube
+figlet: NONE
 date:   2019-06-25
 tags: [youtube, vlog]
 author: "Abel TALKS"

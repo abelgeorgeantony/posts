@@ -2,7 +2,7 @@
 layout: base
 title: "DAWN of TITANS GAMEPlay"
 desc: "Subscribe"
-figlet: youtube
+figlet: NONE
 date:   2018-06-23
 tags: [youtube, vlog]
 author: "Abel TALKS"

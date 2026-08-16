@@ -2,7 +2,7 @@
 layout: base
 title: "🔥🔥Ente puthan headphones unboxing,boat bassheads900"
 desc: ""
-figlet: youtube
+figlet: NONE
 date:   2019-06-19
 tags: [youtube, vlog]
 author: "Abel TALKS"

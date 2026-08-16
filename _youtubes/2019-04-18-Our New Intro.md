@@ -2,7 +2,7 @@
 layout: base
 title: "Our New Intro"
 desc: "Subscribe."
-figlet: youtube
+figlet: NONE
 date:   2019-04-18
 tags: [youtube, vlog]
 author: "Abel TALKS"

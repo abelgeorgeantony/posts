@@ -2,7 +2,7 @@
 layout: base
 title: "New kdm hedphone unboxing"
 desc: "#Edathua #unboxingdude"
-figlet: youtube
+figlet: NONE
 date:   2019-07-09
 tags: [youtube, vlog]
 author: "Abel TALKS"

@@ -2,7 +2,7 @@
 layout: base
 title: "Free fire gameplay after a long time in malayalam"
 desc: "Subscrbe"
-figlet: youtube
+figlet: NONE
 date:   2019-03-02
 tags: [youtube, vlog]
 author: "Abel TALKS"

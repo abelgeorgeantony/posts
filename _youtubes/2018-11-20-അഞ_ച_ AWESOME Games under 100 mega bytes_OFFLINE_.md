@@ -2,7 +2,7 @@
 layout: base
 title: "അഞ്ച് AWESOME Games under 100 mega bytes(OFFLINE)"
 desc: "SUBSCRIBE TO MY CHANNEL,ALSO SHARE. #AbelTALKS9"
-figlet: youtube
+figlet: NONE
 date:   2018-11-20
 tags: [youtube, vlog]
 author: "Abel TALKS"

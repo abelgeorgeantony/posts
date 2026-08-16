@@ -2,7 +2,7 @@
 layout: base
 title: "fz9 timeshift gameplay and tutorial"
 desc: "Subscribe"
-figlet: youtube
+figlet: NONE
 date:   2018-05-06
 tags: [youtube, vlog]
 author: "Abel TALKS"
